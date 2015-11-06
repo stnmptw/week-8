@@ -22,6 +22,20 @@ namespace twozerofoureight
             return board;
         }
 
+        public int getresult()
+        {
+            int result =0;
+            int[,] array2D = GetBoard();
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    result += array2D[i, j];
+                }
+            }
+            return result;
+        }
+
         public TwoZeroFourEightModel(int size)
         {
             boardSize = size;
