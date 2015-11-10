@@ -22,6 +22,7 @@ namespace twozerofoureight
             InitializeComponent();
             model = new TwoZeroFourEightModel();
             model.AttachObserver(this);
+            model.AttachObserver(a);
             controller = new TwoZeroFourEightController();
             controller.AddModel(model);
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
@@ -36,7 +37,6 @@ namespace twozerofoureight
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
             int R = (((TwoZeroFourEightModel)m).getresult());
-            a.lblScore.Text = R.ToString();
             lblScore.Text = R.ToString();
 
         }
